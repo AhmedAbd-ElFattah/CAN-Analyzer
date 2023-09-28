@@ -1,0 +1,3 @@
+[submodule "CAN-Analyzer-Board-Code/STM32-Drivers"]
+	path = CAN-Analyzer-Board-Code/STM32-Drivers
+	url = https://github.com/AhmedAbd-ElFattah/STM32-Drivers

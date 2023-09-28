@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>872</width>
+    <height>962</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CAN Analyzer GUI</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_23">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_8">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_16">
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Select Board</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="RefreshAvailableBoards_pushButton">
+            <property name="text">
+             <string>Refresh</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="AvailableBoards_comboBox"/>
+          </item>
+          <item>
+           <widget class="Line" name="line_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Select Baudrate</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="baudrateSelector_comboBox">
+            <item>
+             <property name="text">
+              <string>1000 kbs</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>800 kbs</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>500 kbs</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>250 kbs</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>125 kbs</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="connect_pushButton">
+            <property name="text">
+             <string>Connect</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_17">
+              <property name="font">
+               <font>
+                <pointsize>18</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>CAN Analyzer - Received messages</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <item>
+                 <widget class="QLabel" name="ReceiveId_label">
+                  <property name="text">
+                   <string>ID</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="IDValBase_comboBox">
+                  <property name="currentIndex">
+                   <number>3</number>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Bin</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Oct</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Dec</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Hex</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_15">
+                  <property name="text">
+                   <string>Filter Id</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="FilterId_comboBox">
+                  <property name="currentIndex">
+                   <number>3</number>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Bin</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Oct</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Dec</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Hex</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="ReceiveDataLength_label">
+                  <property name="text">
+                   <string>Data Length</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="DataLenValBase_comboBox">
+                  <property name="currentIndex">
+                   <number>3</number>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Bin</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Oct</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Dec</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Hex</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="Data_label">
+                  <property name="text">
+                   <string>Data</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="DataValBase_comboBox">
+                  <property name="currentIndex">
+                   <number>3</number>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Bin</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Oct</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Dec</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Hex</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>Max viewed messages</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="spinBox">
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>100</number>
+                </property>
+                <property name="value">
+                 <number>20</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>188</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="Receive_tableWidget">
+              <property name="verticalScrollBarPolicy">
+               <enum>Qt::ScrollBarAsNeeded</enum>
+              </property>
+              <column>
+               <property name="text">
+                <string>ID</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Frame Type</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Data Length</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Filter ID</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>D0</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>D1</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>D2</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>D3</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>D4</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>D5</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>D6</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>D7</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <widget class="Line" name="line_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_18">
+                <property name="font">
+                 <font>
+                  <pointsize>18</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Configure &amp; Add &amp; Remove Filter</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <widget class="QComboBox" name="FilterType_Combobox">
+                  <item>
+                   <property name="text">
+                    <string>One Masked ID 32 Bit</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Two IDs 32 Bit</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Two Masked IDs 16 Bit</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Four IDs 16 Bit</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="FilterFrameTypecomboBox">
+                  <item>
+                   <property name="text">
+                    <string>Data Frame</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Remote Frame</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_5">
+                  <property name="text">
+                   <string>Filter ID</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="FilterId_spinBox">
+                  <property name="maximum">
+                   <number>27</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="DeleteFilter_pushButton">
+                  <property name="text">
+                   <string>Delete Filter with ID = 0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QStackedWidget" name="stackedWidget">
+                <property name="currentIndex">
+                 <number>3</number>
+                </property>
+                <widget class="QWidget" name="page_0">
+                 <layout class="QHBoxLayout" name="horizontalLayout">
+                  <item>
+                   <widget class="QTableWidget" name="QTable_Filter_1ID32_1Mask32">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>200</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="page_1">
+                 <layout class="QHBoxLayout" name="horizontalLayout_2">
+                  <item>
+                   <widget class="QTableWidget" name="QTable_Filter_2IDs32_NoMask">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>150</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="page_2">
+                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                  <item>
+                   <widget class="QTableWidget" name="QTable_Filter_2ID16_2Mask16">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>200</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="page_3">
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <widget class="QTableWidget" name="QTable_Filter_4IDs16_NoMask">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>200</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="text">
+                 <string>Filter Name --&gt; </string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="FilterName_lineEdit"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="AddFilter_pushButton">
+                <property name="text">
+                 <string>Add Filter</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPlainTextEdit {
+    border: 500px solid #000000; /* Adjust the thickness value as needed */
+}
+</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_22">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_19">
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Send CAN Frame</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_17">
+            <item>
+             <widget class="QComboBox" name="SendDataFrameType_comboBox">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>0</height>
+               </size>
+              </property>
+              <item>
+               <property name="text">
+                <string>Data Frame</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Remote Frame</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>ID</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="SendDataIdBase_comboBox">
+              <property name="currentIndex">
+               <number>3</number>
+              </property>
+              <item>
+               <property name="text">
+                <string>Bin</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Oct</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dec</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Hex</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="SendIdOfData_lineEdit">
+              <property name="text">
+               <string>0</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>Data Length</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="SendDataLength_comboBox">
+              <item>
+               <property name="text">
+                <string>0</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>1</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>2</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>3</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>4</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>5</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>6</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>7</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>8</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_18">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_9">
+              <item>
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>Data 1</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="SendData1DataType_comboBox">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="currentIndex">
+                 <number>3</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Bin</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Oct</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Dec</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Hex</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="SendData1_lineEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>Data 2</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="SendData2DataType_comboBox">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="currentIndex">
+                 <number>3</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Bin</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Oct</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Dec</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Hex</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="SendData2_lineEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_19">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_11">
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string>Data 3</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="SendData3DataType_comboBox">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="currentIndex">
+                 <number>3</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Bin</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Oct</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Dec</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Hex</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="SendData3_lineEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <item>
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>Data 4</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="SendData4DataType_comboBox">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="currentIndex">
+                 <number>3</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Bin</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Oct</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Dec</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Hex</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="SendData4_lineEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_20">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_13">
+              <item>
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string>Data 5</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="SendData5DataType_comboBox">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="currentIndex">
+                 <number>3</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Bin</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Oct</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Dec</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Hex</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="SendData5_lineEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_14">
+              <item>
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string>Data 6</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="SendData6DataType_comboBox">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="currentIndex">
+                 <number>3</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Bin</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Oct</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Dec</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Hex</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="SendData6_lineEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_21">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_15">
+              <item>
+               <widget class="QLabel" name="label_14">
+                <property name="text">
+                 <string>Data 7</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="SendData7DataType_comboBox">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="currentIndex">
+                 <number>3</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Bin</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Oct</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Dec</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Hex</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="SendData7_lineEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_16">
+              <item>
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string>Data 8</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="SendData8DataType_comboBox">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="currentIndex">
+                 <number>3</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Bin</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Oct</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Dec</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Hex</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="SendData8_lineEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="CANSendFrame_pushButton">
+          <property name="text">
+           <string>Send Frame</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="FilterExplorer_tableWidget">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>900</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::SolidLine</enum>
+      </property>
+      <column>
+       <property name="text">
+        <string>Property</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Value</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>872</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
