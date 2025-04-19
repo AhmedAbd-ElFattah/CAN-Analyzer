@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="origin"
+        fetch="ssh://git@github.com/" />
+
+  
+  <default revision="main"
+           remote="origin"
+           sync-j="4" />
+  
+  <project path="Linux-Driver" name="AhmedAbd-ElFattah/CAN-Analyzer-Linux-Driver" />
+  <project path="CAN-Analyzer-CLI" name="AhmedAbd-ElFattah/CAN-Analyzer-CLI" />
+  <project path="common" name="AhmedAbd-ElFattah/CAN-Analyzer-Common" />
+  <project path="test" name="AhmedAbd-ElFattah/CAN-Analyzer-Test" />
+  <project path="tools" name="AhmedAbd-ElFattah/CAN-Analyzer-Tools" />
+  <project path="STM32-CAN-Analyzer" name="AhmedAbd-ElFattah/STM32-CAN-Analyzer" />
+</manifest>
