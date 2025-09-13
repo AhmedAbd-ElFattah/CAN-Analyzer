@@ -10,6 +10,7 @@
   
   <project path="Linux-Driver" name="AhmedAbd-ElFattah/CAN-Analyzer-Linux-Driver" />
   <project path="CAN-Analyzer-CLI" name="AhmedAbd-ElFattah/CAN-Analyzer-CLI" />
+  <project path="CAN-Analyzer-CLI-Rust" name="AhmedAbd-ElFattah/CAN-Analyzer-CLI-Rust" />
   <project path="common" name="AhmedAbd-ElFattah/CAN-Analyzer-Common" />
   <project path="test" name="AhmedAbd-ElFattah/CAN-Analyzer-Test" />
   <project path="tools" name="AhmedAbd-ElFattah/CAN-Analyzer-Tools" />
